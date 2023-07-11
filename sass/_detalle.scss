@@ -1,0 +1,132 @@
+@use 'variables';
+@use 'mixins';
+.div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.detalle{
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  @media (min-width: 1115px){
+    width: 50%;
+  }
+  &__company{
+    color: variables.$principal;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    font-weight: 900;
+  }
+  &__tittle{
+    font-size: 1.7em;
+    margin-bottom: 16px;
+    font-weight: 900;
+  }
+  &__descripcion{
+    border-bottom: solid 1px variables.$black;
+    font-size: 0.94em;
+    line-height: 24px;
+    margin-bottom: 24px;
+    padding-bottom: 15px;
+  }
+  &__detalles{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    @media (min-width: 1115px){
+      flex-direction: column;
+      align-items: start;
+    }
+    &-precio{
+      font-size: 1.8em;
+      font-weight: 700;
+    }
+    &-categoria{
+      font-weight: 700;
+      color: variables.$principal;
+    }
+    &-color{
+      color: variables.$principal;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    &-memoria{
+      color: variables.$principal;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+  &__quantity{
+    
+    @media (min-width: 1115px){
+      display: flex;
+      gap: 32px;
+    }
+  }
+  &__button{
+    @include mixins.button;
+    &-cart{
+      width: 25px;
+      
+    }
+  }
+  &__span{
+    display: none;
+    color: red;
+    font-size: .8em;
+    font-weight: 700;
+  }
+}
+.input{
+  background-color: rgb(240, 240, 240);
+  padding: 0 10px;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  &__menos{
+    width: 25px;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  &__mas{
+    
+    width: 25px;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  &__number{
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+    border: none;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-align: center;
+    outline: none;
+    height: 57px;
+    border-radius: 8px;
+  }
+}
+.image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (min-width: 1115px){
+    
+    width: 50%;
+  }
+}
+.content__img{
+  max-width: 80%;
+}

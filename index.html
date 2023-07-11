@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gofix - Repara tu celular</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <main class="main-contanier">
+      <header class="header">
+        <div class="header__redes">
+          <ul class="header__redes-ul">
+            <li>
+              <a class="header__redes__link" href="#">
+                <i class="bi bi-facebook">/gofixtucuman</i>
+              </a>
+            </li>
+            <li>
+              <a class="header__redes__link" href="#">
+                <i class="bi bi-instagram">/gofixtucuman</i>
+              </a>
+            </li>
+            <li>
+              <a class="header__redes__link" href="#">
+                <i class="bi bi-linkedin">/gofixtucuman</i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="header__navigation">
+          <img class="header__menu" src="./img/menu.png" alt="" />
+          <img class="header__logo" src="./img/logo.jpg" alt="logo" />
+        </div>
+        <!-- Inicio navbar modal -->
+        <div class="modal-navbar__background">
+          <nav class="modal-navbar">
+            <img
+              src="./img/cerrar.png"
+              alt="close-icon"
+              class="modal-navbar__close-icon"
+            />
+            <ul class="modal-navbar__items">
+              <li><a href="#" class="modal-navbar__link">Inicio</a></li>
+              <li><a href="#" class="modal-navbar__link">Producto</a></li>
+              <li><a href="#" class="modal-navbar__link">Locales</a></li>
+              <li><a href="#" class="modal-navbar__link">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- Fin navbar modal -->
+        <div class="header__cart-avatar">
+          <div class="header__cart">
+            <div class="header__cart--notification">0</div>
+            <img
+              id="cartBolsa"
+              class="header__cart--bolsa"
+              src="./img/bolsa-de-la-compra.png"
+              alt=""
+            />
+          </div>
+          <img class="header__avatar" src="./img/usuario.png" alt="" />
+        </div>
+      </header>
+      <nav class="navbar">
+        <ul class="navbar__items">
+          <li><a href="index.html" class="navbar__link">Inicio</a></li>
+          <li><a href="#" class="navbar__link">Producto</a></li>
+          <li><a href="#" class="navbar__link">Locales</a></li>
+          <li><a href="#" class="navbar__link">Contacto</a></li>
+          <li id="configuracionAdmin">
+            <a href="backoficce.html"  class="navbar__link"><i class="bi bi-gear"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="baner" id="baner1">
+        <div class="baner__info">
+          <p class="baner__info-titulo">¿queres tener tu propio local goxif?</p>
+          <p class="baner__info-body">informate como abrir tu local hoy</p>
+          <button class="baner__info-button" >Franquicias</button>
+        </div>
+        <div class="baner__contenedorImg">
+          <img class="baner__img" src="./img/empresario-franquicias-gofix.png" alt="">
+        </div>
+      </div>
+      <div class="baner2" id="baner2">
+        <div class="baner2__contenedorImg">
+          <img class="baner2__img" src="./img/reparacion-de-celular-1.png" alt="">
+        </div>
+        <div class="baner2__info">
+          <p class="baner2__info-titulo">repara tus celulares en el dia</p>
+          <p class="baner2__info-body">cotiza la reparacion de tu equipo</p>
+          <button class="baner2__info-button" >Contactar un asesor</button>
+        </div>
+      </div>
+      <div class="flechas">
+        <img class="flechas_img-menor" src="./img/simbolo-menor-que.png" alt="" onclick="mostrarBannerAnterior()">
+        <img class="flechas_img-mayor" src="./img/mayor-que-el-simbolo.png" alt="" onclick="mostrarSiguienteBanner()">
+      </div>
+      <div class="container-principal">
+        <aside class="container-principal__aside"></aside>
+        <div>
+          <div class="slogan">
+            <div class="slogan__header">
+              <p>Reparamos <span class="slogan__header-marca">iPhone y Apple</span></p>
+              <p>Somos servicio técnico oficial de <span class="slogan__header-marca">Samsung</span></p>
+            </div>
+            <div class="slogan__body">
+              <div class="slogan__body-locales">
+                <img class="slogan__body-locales-img" src="./img/locales.png" alt="locales">
+                <div class="slogan__body-texto">
+                  <p>encontra un gofix cerca tuyo</p>
+                  <button>Buscar ahora <span>></span></button>
+                </div>
+              </div>
+              <div class="slogan__body-celulares">
+                <img class="slogan__body-celulares-img" src="./img/celulares.png" alt="celulares">
+                <div class="slogan__body-texto">
+                  <p>CELULARES APPLE, SAMSUNG Y MAS</p>
+                  <button>Buscar ahora <span>></span></button>
+                </div>
+              </div>
+            </div>
+            <div class="slogan__footer">
+              <div class="slogan__footer-content">
+                <div><img class="slogan__footer-content-img" src="./img/mano.png" alt="mano"></div>
+                <div><p>99% reviews <span>positivas</span></p></div>
+              </div>
+              <div class="slogan__footer-content">
+                <div><img class="slogan__footer-content-img" src="./img/ciclo.png" alt="mano"></div>
+                <div><p><span>Servicio</span> garantizado</p></div>
+              </div>
+              <div class="slogan__footer-content">
+                <div><img class="slogan__footer-content-img" src="./img/tarjeta-de-credito.png" alt="mano"></div>
+                <div><p><span>Pago</span> Seguro</p></div>
+              </div>
+              <div class="slogan__footer-content">
+                <div>
+                  <img class="slogan__footer-content-img" src="./img/etiqueta.png" alt="mano">
+                </div>
+                <div>
+                  <p><span>Solo las mejores</span>marcas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-principal__products">
+
+          </div>
+        </div>
+        <div class="container-principal__derecha"></div>
+      </div>
+      <div id="myModal" class="modal-login">
+        <div class="modal-login__content">
+          <span class="modal-login__close" onclick="cerrarModal()">&times;</span>
+          <div id="htmlContent">
+            <form class="modal-login__form" id="formModal">
+              <p id="heading" class="modal-login__form-heading">Login</p>
+              <div class="modal-login__form-field">
+              <svg class="modal-login__form-input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z"></path>
+              </svg>
+                <input name="username" autocomplete="off" placeholder="Username" class="modal-login__form-input-field" type="text">
+              </div>
+              <div class="modal-login__form-field">
+              <svg class="modal-login__form-input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"></path>
+              </svg>
+                <input name="password" placeholder="Password" class="modal-login__form-input-field" type="password">
+              </div>
+              <span id="spanLogin"></span>
+              <div class="modal-login__form-btn">
+              <button type="submit" class="modal-login__form-button1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+              <button class="modal-login__form-button2">Sign Up</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- inicio cart modal -->
+      <div id="cart-modal" class="cart-modal">
+        <p class="cart-modal__tittle">Carrito</p>
+        <div class="cart-modal__container">
+          <div class="cart-modal__detalles"></div>
+          <button class="cart-modal__button">Checkout</button>
+        </div>
+      </div>
+      <!-- fin cart modal -->
+    </main>
+    <script src="./js/index.js"></script>
+    <script src="./js/productos.js"></script>
+    <script src="./js/cart.js"></script>
+  </body>
+</html>

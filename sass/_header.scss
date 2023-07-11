@@ -1,0 +1,104 @@
+@use 'variables';
+.header{
+  background-color: variables.$principal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 68px;
+  padding: 0 24px;
+  @media (min-width: 1115px){
+    height: 77px;
+  }
+  &__navigation{
+    width: 205px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (min-width: 1115px){
+      width: 590px;
+    }
+  }
+  &__menu{
+    &:hover{
+      cursor: pointer;
+    }
+    @media (min-width: 1115px){
+      display: none;
+    }
+  }
+  &__logo{
+    width: 150px;
+    cursor: pointer;
+  }
+  &__cart-avatar{
+    display: flex;
+    align-items: center;
+    width: 90px;
+    justify-content: space-between;
+    @media (min-width: 1115px){
+      width: 125px;
+    }
+
+  }
+  &__cart{
+    position: relative;
+    &--notification{
+      background-color: variables.$black;
+      width: 15px;
+      height: 12;
+      border-radius: 16px;
+      position: absolute;
+      top: -2px;
+      right: -5px;
+      font-size: 0.6em;
+      text-align: center;
+      color: variables.$white;
+    }
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  &__cart--bolsa{
+    width: 30px;
+    
+  }
+  &__avatar{
+    width: 35px;
+    cursor: pointer;
+    @media (min-width: 1115px){
+      width: 48px;
+    }
+  }
+  &__menu{
+    width: 30px;
+  }
+  &__redes{
+    height: 100%;
+    width: 500px;
+    display: none;
+    align-items: center;
+    @media (min-width: 1115px){
+      display: block;
+    }
+    &__link{
+      text-decoration: none;
+      color: black;
+      font-weight: 700;
+      font-size: 1.1em;
+      &:hover{
+        color: variables.$white;
+      }
+    }
+    &-ul{
+      height: 100%;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+  }
+  
+  
+}

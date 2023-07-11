@@ -1,0 +1,28 @@
+@use 'variables';
+@mixin modal-background{
+  display: none;
+  background-color: variables.$black-modal;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+@mixin button{
+  background-color: variables.$principal;
+  width: 100%;
+  height: 57px;
+  border-radius: 8px;
+  border: none;
+  color: variables.$black;
+  font-size: 1.2em;
+  font-weight: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap :16px;
+  &:hover{
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,113 @@
+@use 'variables';
+
+.baner2 {
+  display: none;
+  flex-direction: row;
+  width: 100%;
+  height: 200px;
+  background: rgb(240, 229, 235);
+  background: linear-gradient(
+    110deg,
+    rgba(240, 229, 235, 1) 34%,
+    rgba(4, 4, 4, 1) 100%
+  );
+
+  @media (min-width: 1115px) {
+    height: 350px;
+  }
+
+  &__contenedorImg {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__img {
+    bottom: 0px;
+    right: 50%;
+    width: 250px;
+
+    @media (min-width: 1115px) {
+      width: 500px;
+    }
+  }
+
+  &__info {
+    padding: 24px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    @media (min-width: 1115px) {
+      padding: 100px;
+      justify-content: center;
+    }
+
+    &-titulo {
+      text-transform: uppercase;
+      color: variables.$principal;
+      font-weight: 400;
+      font-size: 0.6em;
+      font-family: variables.$font;
+
+      @media (min-width: 1115px) {
+        font-weight: 700;
+        font-size: 1.2em;
+      }
+    }
+
+    &-body {
+      text-transform: uppercase;
+      color: variables.$white;
+      font-weight: 700;
+      font-size: 1em;
+
+      @media (min-width: 1115px) {
+        font-weight: 700;
+        font-size: 2em;
+      }
+    }
+
+    &-button {
+      border: none;
+      width: 50%;
+      height: 47px;
+      border-radius: 8px;
+      background-color: variables.$black;
+      color: variables.$white;
+
+      @media (min-width: 1115px) {
+        width: 260px;
+      }
+    }
+  }
+
+  &.show {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  &.hide {
+    animation: fadeOut 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}

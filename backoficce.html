@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gofix - Administrador</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <main class="main-contanier">
+      <header class="header">
+        <div class="header__redes">
+          <ul class="header__redes-ul">
+            <li>
+              <a class="header__redes__link" href="#">
+                <i class="bi bi-facebook">/gofixtucuman</i>
+              </a>
+            </li>
+            <li>
+              <a class="header__redes__link" href="#">
+                <i class="bi bi-instagram">/gofixtucuman</i>
+              </a>
+            </li>
+            <li>
+              <a class="header__redes__link" href="#">
+                <i class="bi bi-linkedin">/gofixtucuman</i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="header__navigation">
+          <img class="header__menu" src="./img/menu.png" alt="" />
+          <img class="header__logo" src="./img/logo.jpg" alt="logo" />
+        </div>
+        <!-- Inicio navbar modal -->
+        <div class="modal-navbar__background">
+          <nav class="modal-navbar">
+            <img
+              src="./img/cerrar.png"
+              alt="close-icon"
+              class="modal-navbar__close-icon"
+            />
+            <ul class="modal-navbar__items">
+              <li><a href="#" class="modal-navbar__link">Inicio</a></li>
+              <li><a href="#" class="modal-navbar__link">Producto</a></li>
+              <li><a href="#" class="modal-navbar__link">Locales</a></li>
+              <li><a href="#" class="modal-navbar__link">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- Fin navbar modal -->
+        <div class="header__cart-avatar">
+          <div class="header__cart">
+            <div class="header__cart--notification">3</div>
+            <img
+              class="header__cart--bolsa"
+              src="./img/bolsa-de-la-compra.png"
+              alt=""
+            />
+          </div>
+          <img class="header__avatar" src="./img/usuario.png" alt="" />
+        </div>
+      </header>
+      <nav class="navbar">
+        <ul class="navbar__items">
+          <li><a href="index.html" class="navbar__link">Inicio</a></li>
+          <li><a href="#" class="navbar__link">Producto</a></li>
+          <li><a href="#" class="navbar__link">Locales</a></li>
+          <li><a href="#" class="navbar__link">Contacto</a></li>
+          <li>
+            <a href="backoficce.html"  class="navbar__link"><i class="bi bi-gear"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="container-principal">
+        <aside class="container-principal__aside"></aside>
+        <div class="container-principal__forms">
+          <form class="container-principal__forms-backoffice" id="formProductos">
+            <p id="heading" class="container-principal__forms-heading">Agrega un nuevo producto</p>
+            <div class="modal-login__form-field">
+              <input
+                id="nombre"
+                autocomplete="off"
+                placeholder="nombre"
+                class="modal-login__form-input-field"
+                type="text"
+                name="nombre"
+              />
+            </div>
+            <div class="modal-login__form-field">
+              <input
+                autocomplete="off"
+                placeholder="categoria"
+                class="modal-login__form-input-field"
+                type="text"
+                name="categoria"
+              />
+            </div>
+            <div class="modal-login__form-field">
+              <input
+                id="precio"
+                autocomplete="off"
+                placeholder="precio"
+                class="modal-login__form-input-field"
+                type="number"
+                name="precio"
+              />
+            </div>
+            <div class="modal-login__form-field">
+              <input
+                autocomplete="off"
+                placeholder="descripcion"
+                class="modal-login__form-input-field"
+                type="text"
+                name="descripcion"
+              />
+            </div>
+            <div class="modal-login__form-field">
+              <input
+                autocomplete="off"
+                placeholder="modelo"
+                class="modal-login__form-input-field"
+                type="text"
+                name="modelo"
+              />
+            </div>
+            <div class="modal-login__form-field">
+              <input
+                autocomplete="off"
+                placeholder="capacidad"
+                class="modal-login__form-input-field"
+                type="text"
+                name="capacidad"
+              />
+            </div>
+            <div class="modal-login__form-field">
+              <input
+                autocomplete="off"
+                placeholder="marca"
+                class="modal-login__form-input-field"
+                type="text"
+                name="marca"
+              />
+            </div>
+            <div class="modal-login__form-field">
+              <input
+                autocomplete="off"
+                placeholder="color"
+                class="modal-login__form-input-field"
+                type="text"
+                name="color"
+              />
+            </div>
+            <div class="modal-login__form-field" type="file">
+              <label for="file">
+                <span id="file-name"><i class="bi bi-file-earmark-arrow-up-fill"></i>Seleccionar archivo<i class="bi bi-file-earmark-arrow-up-fill"></i></span>
+              </label>
+              <input 
+              id="file"
+              type="file"
+              name="imagen"
+              onchange="updateFileName()" >
+            </div>
+            <span id="spanDuplicados" class="span-duplicados">Los valores marcados en rojo ya existen, por favor modificalos</span>
+            <div class="modal-login__form-btn">
+              <button type="submit" class="modal-login__form-button1">Enviar</button>
+            </div>
+          </form>
+          <form class="container-principal__forms-backoffice" id="formUsuarios">
+            <p id="heading" class="modal-login__form-heading">Agrega un nuevo usuario</p>
+            <div class="modal-login__form-field">
+              <input
+                onchange="compararValorUsername(this.value)"
+                id="username"
+                autocomplete="off"
+                placeholder="username"
+                class="modal-login__form-input-field"
+                type="text"
+                name="username"
+              />
+            </div>
+            <div class="modal-login__form-field">
+              <input
+                autocomplete="off"
+                placeholder="password"
+                class="modal-login__form-input-field"
+                type="password"
+                name="password"
+              />
+            </div>
+            <div class="modal-login__form-field">
+              <input
+                id="email"
+                onchange="compararValorEmail(this.value)"
+                autocomplete="off"
+                placeholder="email"
+                class="modal-login__form-input-field"
+                type="email"
+                name="email"
+              />
+            </div>
+            <div class="modal-login__form-field">
+              <select name="roles" class="modal-login__form-input-field select"type="text">
+                <option class="option" value="admin">admin</option>
+                <option class="option" value="moderator">moderator</option>
+                <option class="option" value="user">user</option>
+              </select>
+            </div>
+            <span id="spanDuplicados" class="span-duplicados">Los valores marcados en rojo ya existen, por favor modificalos</span>
+            <div class="modal-login__form-btn">
+              <button type="submit" class="modal-login__form-button1">Enviar</button>
+            </div>
+          </form>
+          <div id="nuevoProducto" class="container-principal__forms-opcion" onclick="mostrarForm('formProductos')">
+            <p id="heading" class="container-principal__forms-heading">Agrega un nuevo producto</p>
+          </div>
+          <div id="nuevoUsuario" class="container-principal__forms-opcion" onclick="mostrarForm('formUsuarios')">
+            <p id="heading" class="container-principal__forms-heading">Agrega un nuevo usuario</p>
+          </div>
+        </div>
+        <div class="div-derecha"></div>
+      </div>
+    </main>
+    <script src="./js/backoffice.js"></script>
+  </body>
+</html>

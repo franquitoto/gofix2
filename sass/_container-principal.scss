@@ -1,0 +1,89 @@
+@use 'variables';
+.container-principal{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (min-width: 1115px){
+    display: grid;
+    grid-template-columns: 3fr 6fr 3fr;
+  }
+  &__aside{
+    display: none;
+    @media (min-width: 1115px){
+      display: block;
+    }
+  }
+  &__derecha{
+    display: none;
+    @media (min-width: 1115px){
+      display: block;
+    }
+  }
+  &__products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 1115px){
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: start;
+    }
+  }
+  &__card{
+    width: 280px;
+    
+    margin: 1.5rem .75rem 1.5rem .75rem;
+    background-color: variables.$white;
+    border-radius: 5%;
+    &:hover{
+      transform: scale(1.1);
+      transition: transform 0.5s ease-in-out;
+      box-shadow: .5rem .5rem 1rem variables.$principal-ligth;
+    }
+    &-header{
+      display: flex;
+      flex-direction: column;
+      margin: 1rem;
+    }
+    &-category{
+      color: grey;
+      font-size: 1rem;
+      margin: 0;
+      font-weight: 700;
+    }
+    &-tittle{
+      color: variables.$principal;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    &-img{
+      width: 100%;
+      height: 100%;
+    }
+    &-footer{
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin:1rem;
+    }
+    &-precio{
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      color: variables.$principal-ligth;
+      font-weight: 700;
+    }
+    &-add{
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+      border: 0;
+      font-size: 1.5rem;
+      color: grey;
+      &:hover{
+        color: variables.$principal-ligth;
+      }
+    }
+
+  }
+}

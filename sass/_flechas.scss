@@ -1,0 +1,22 @@
+@use 'variables';
+.flechas{
+  position: relative;
+  &_img-menor,
+  &_img-mayor{
+    cursor: pointer;
+    position: absolute;
+    width: 50px;
+    top: -50px;
+    &:hover{
+      transform: scale(1.5);
+      transition: transform 0.5s ease-in-out;
+    }
+  }
+  &_img-menor{
+    left: 40%;
+    
+  }
+  &_img-mayor{
+    right: 40%;
+  }
+}

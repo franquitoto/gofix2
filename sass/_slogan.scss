@@ -1,0 +1,93 @@
+@use 'variables';
+
+.slogan{
+  
+  width: 100%;
+  height: 700px;
+  @media (min-width: 1115px) {
+    width: 100%;
+  }
+  &__header{
+    border-radius: 20px;
+    margin: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background-color: variables.$black;
+    height: 100px;
+    & p{
+      margin: 0;
+      padding: 0;
+      color: variables.$white;
+      font-family: variables.$font;
+      font-weight: 700;
+      font-size: 1rem;
+      @media (min-width: 1115px) {
+        font-size: 1.5em;
+      }
+    }
+    &-marca{
+      color: variables.$principal;
+    }
+  }
+  &__body{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    @media (min-width: 1115px) {
+      flex-direction: row;
+      height: 200px;
+    }
+    &-locales,
+    &-celulares{
+      border-radius: 20px;
+      background-color: gainsboro;
+      margin: 20px 24px 0 24px;
+      height: 175px;
+      display: flex;
+      flex-direction: row;
+      &-img{
+        width: 50%;
+        margin: 24px 0 24px 24px;
+      }
+    }
+    &-texto{
+      width: 50%;
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      justify-content: center;
+      text-transform: uppercase;
+      & p{
+        color: gray;
+        font-weight: 700;
+        font-family: variables.$font;
+        width: 50%;
+      }
+      & button {
+        border: none;
+        background-color: transparent;
+        font-weight: 700;
+        & span {
+          border-radius: 25px;
+          background-color: variables.$principal;
+          color: variables.$white;
+        }
+      }
+    }
+  }
+  &__footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &-content{
+      &-img{
+        width: 25px;
+      }
+    }
+  }
+
+} 

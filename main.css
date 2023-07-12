@@ -194,7 +194,7 @@
 @media (min-width: 1115px) {
   .container-principal {
     display: grid;
-    grid-template-columns: 3fr 6fr 3fr;
+    grid-template-columns: 1fr 4fr 1fr;
   }
 }
 .container-principal__aside {
@@ -217,12 +217,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 @media (min-width: 1115px) {
   .container-principal__products {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: center;
+  }
+}
+.container-principal__destacados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 1115px) {
+  .container-principal__destacados {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 .container-principal__card {
@@ -279,6 +293,12 @@
 }
 .container-principal__card-add:hover {
   color: #ff39a6;
+}
+
+.titulo-destacados {
+  text-align: center;
+  color: black;
+  font-weight: 700;
 }
 
 .modal-login {
@@ -939,15 +959,20 @@
 }
 
 .slogan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   height: 700px;
 }
 @media (min-width: 1115px) {
   .slogan {
     width: 100%;
+    height: 500px;
   }
 }
 .slogan__header {
+  width: 80%;
   border-radius: 20px;
   margin: 24px;
   display: flex;
@@ -957,6 +982,11 @@
   padding: 12px;
   background-color: black;
   height: 100px;
+}
+@media (min-width: 1115px) {
+  .slogan__header {
+    width: 100%;
+  }
 }
 .slogan__header p {
   margin: 0;
@@ -978,11 +1008,14 @@
   display: flex;
   flex-direction: column;
   height: 400px;
+  width: 80%;
 }
 @media (min-width: 1115px) {
   .slogan__body {
     flex-direction: row;
     height: 200px;
+    width: 100%;
+    justify-content: center;
   }
 }
 .slogan__body-locales, .slogan__body-celulares {
@@ -992,6 +1025,11 @@
   height: 175px;
   display: flex;
   flex-direction: row;
+}
+@media (min-width: 1115px) {
+  .slogan__body-locales, .slogan__body-celulares {
+    width: 50%;
+  }
 }
 .slogan__body-locales-img, .slogan__body-celulares-img {
   width: 50%;
@@ -1022,12 +1060,18 @@
   color: #fffff7;
 }
 .slogan__footer {
+  width: 80%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   overflow-x: auto;
   margin: 24px;
+}
+@media (min-width: 1115px) {
+  .slogan__footer {
+    width: 100%;
+  }
 }
 .slogan__footer-content {
   display: flex;
@@ -1037,6 +1081,11 @@
   width: 100px;
   border: solid 1px gainsboro;
   height: 100px;
+}
+@media (min-width: 1115px) {
+  .slogan__footer-content {
+    width: 250px;
+  }
 }
 .slogan__footer-content div {
   height: 50%;
@@ -1052,7 +1101,6 @@
 }
 
 .locales {
-  width: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1069,7 +1117,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  width: 380px;
   height: 624px;
   margin: 12px;
 }
@@ -1114,6 +1162,140 @@
 .locales__local-button p:hover {
   transform: scale(1.2);
   transition: transform 0.5s ease-in-out;
+}
+
+.filtro {
+  display: none;
+  background-color: #fb048c;
+  opacity: 0.8;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+}
+@media (min-width: 1115px) {
+  .filtro {
+    display: block;
+    height: 400px;
+    opacity: 1;
+    top: 300px;
+    left: 80px;
+    border-radius: 16px;
+  }
+}
+.filtro h3 {
+  margin: 70px 0 0 24px;
+  font-weight: 700;
+  color: #fffff7;
+}
+.filtro__lista {
+  margin: 5px 0 0 30px;
+}
+.filtro__lista p {
+  color: #fffff7;
+  font-weight: 700;
+}
+.filtro__lista-ul {
+  list-style: none;
+}
+.filtro__lista-ul li {
+  color: #fffff7;
+  font-weight: 700;
+  font-weight: 700;
+  cursor: pointer;
+}
+.filtro__lista-ul li:hover {
+  color: black;
+}
+
+.footer {
+  background-color: black;
+  height: 200px;
+  width: 100%;
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer h3 {
+  color: #fffff7;
+  font-weight: 700;
+}
+.footer__redes-ul {
+  list-style: none;
+}
+.footer__redes__link {
+  color: #fffff7;
+  font-weight: 700;
+}
+@media (min-width: 1115px) {
+  .footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+.cart {
+  width: 360px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px;
+  border: solid 1px;
+  margin: 200px;
+}
+@media (min-width: 1115px) {
+  .cart {
+    width: 720px;
+  }
+}
+.cart__container {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.cart__detalles {
+  width: 100%;
+  border-bottom: solid 1px gainsboro;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 24px;
+}
+.cart__img {
+  width: 100px;
+}
+.cart__delete {
+  width: 25px;
+}
+.cart__total {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.cart__total-precio {
+  color: black;
+  font-weight: 700;
+}
+.cart__button {
+  background-color: #fb048c;
+  width: 150px;
+  height: 57px;
+  border-radius: 8px;
+  border: none;
+  color: black;
+  font-size: 1.2em;
+  font-weight: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.cart__button:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 
 .main-contanier {

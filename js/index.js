@@ -43,6 +43,19 @@ const resetForm = () =>{
   }
 }
 
+// Logica para modalnavbar
+const closeIcon = document.querySelector('.modal-navbar__close-icon');
+closeIcon.addEventListener('click', () =>{
+  const modalnavbar = document.querySelector('.modal-navbar__background');
+  modalnavbar.style.display = 'none'
+})
+const botonHamburguesa = document.querySelector('.header__menu');
+botonHamburguesa.addEventListener('click', () =>{
+  const modalnavbar = document.querySelector('.modal-navbar__background');
+  modalnavbar.style.display = 'block'
+})
+
+
 // Creamos la logica para logearse mediante la api
 const formModal = document.getElementById('formModal');
 const span2 = document.getElementById('spanLogin');
@@ -94,6 +107,17 @@ function mostrarSiguienteBanner() {
     baner1.style.display = 'flex';
   }, 500); // Tiempo de espera para ocultar el banner anterior
 }
+
+const buscarLocales = document.getElementById('buscarLocales');
+const buscarCelulares = document.getElementById('buscarCelulares');
+
+buscarCelulares.addEventListener('click', () => {
+  window.location.href = "productos.html"
+})
+buscarLocales.addEventListener('click', () => {
+  window.location.href = "locales.html"
+})
+
 
 
 

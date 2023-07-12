@@ -44,6 +44,7 @@
         telefono1.textContent = local.whatsapp
         telefono2.textContent = local.telefono
         email.textContent = local.mail
+        boton.textContent = "IR AL LOCAL"
 
         // creamos la card
         divBoton.appendChild(boton)

@@ -1,0 +1,61 @@
+@use 'variables';
+@use 'mixins';
+.cart{
+  width:360px ;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px;
+  border: solid 1px;
+  margin: 200px;
+  @media (min-width: 1115px){
+    width: 720px;
+    
+  }
+  &__container{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__detalles{
+    width: 100%;
+    border-bottom: solid 1px gainsboro;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 24px;
+  }
+  &__img{
+    width: 100px;
+  }
+  &__delete{
+    width: 25px;
+  }
+  &__total{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    &-precio{
+      color: variables.$black;
+      font-weight: 700;
+    }
+  }
+  &__button{
+    background-color: variables.$principal;
+  width: 150px;
+  height: 57px;
+  border-radius: 8px;
+  border: none;
+  color: variables.$black;
+  font-size: 1.2em;
+  font-weight: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap :16px;
+  &:hover{
+    cursor: pointer;
+    opacity: 0.5;
+  }
+  }
+}

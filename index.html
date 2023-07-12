@@ -50,9 +50,9 @@
               class="modal-navbar__close-icon"
             />
             <ul class="modal-navbar__items">
-              <li><a href="#" class="modal-navbar__link">Inicio</a></li>
-              <li><a href="#" class="modal-navbar__link">Producto</a></li>
-              <li><a href="#" class="modal-navbar__link">Locales</a></li>
+              <li><a href="index.html" class="modal-navbar__link">Inicio</a></li>
+              <li><a href="productos.html" class="modal-navbar__link">Productos</a></li>
+              <li><a href="./locales.html" class="modal-navbar__link">Locales</a></li>
               <li><a href="#" class="modal-navbar__link">Contacto</a></li>
             </ul>
           </nav>
@@ -74,8 +74,8 @@
       <nav class="navbar">
         <ul class="navbar__items">
           <li><a href="index.html" class="navbar__link">Inicio</a></li>
-          <li><a href="#" class="navbar__link">Producto</a></li>
-          <li><a href="#" class="navbar__link">Locales</a></li>
+          <li><a href="productos.html" class="navbar__link">Productos</a></li>
+          <li><a href="locales.html" class="navbar__link">Locales</a></li>
           <li><a href="#" class="navbar__link">Contacto</a></li>
           <li id="configuracionAdmin">
             <a href="backoficce.html"  class="navbar__link"><i class="bi bi-gear"></i></a>
@@ -119,14 +119,14 @@
                 <img class="slogan__body-locales-img" src="./img/locales.png" alt="locales">
                 <div class="slogan__body-texto">
                   <p>encontra un gofix cerca tuyo</p>
-                  <button>Buscar ahora <span>></span></button>
+                  <button id="buscarLocales">Buscar ahora <span>></span></button>
                 </div>
               </div>
               <div class="slogan__body-celulares">
                 <img class="slogan__body-celulares-img" src="./img/celulares.png" alt="celulares">
                 <div class="slogan__body-texto">
                   <p>CELULARES APPLE, SAMSUNG Y MAS</p>
-                  <button>Buscar ahora <span>></span></button>
+                  <button id="buscarCelulares">Buscar ahora <span>></span></button>
                 </div>
               </div>
             </div>
@@ -153,24 +153,9 @@
               </div>
             </div>
           </div>
-          <div class="container-principal__products">
+          <h3 class="titulo-destacados">Productos destacados</h3>
+          <div class="container-principal__destacados">
 
-          </div>
-          <div class="locales">
-            <div class="locales__local">
-              <img class="locales__local-img" src="./img//locales.png" alt="locales">
-              <div class="locales__local-content">
-                <h3>Alto Palermo</h3>
-                <p>Av. Coronel Diaz 2289</p>
-                <p> Lunes a Viernes de 09:00 a 19:00 hs                       Sábados de 10:00 a 18:00 hs</p>
-                <p>11 3591 2981</p>
-                <p>11 3591 2981</p>
-                <p>coroneldiaz@gofix.com.ar</p>
-              </div>
-              <div class="locales__local-button">
-                <p>IR AL LOCAL</p>
-              </div>
-            </div>
           </div>
         </div>
         <div class="container-principal__derecha"></div>
@@ -207,10 +192,35 @@
         <p class="cart-modal__tittle">Carrito</p>
         <div class="cart-modal__container">
           <div class="cart-modal__detalles"></div>
-          <button class="cart-modal__button">Checkout</button>
+          <button class="cart-modal__button">Comprar</button>
         </div>
       </div>
       <!-- fin cart modal -->
+      <footer class="footer">
+        <div class="footer__logo">
+          <img src="./img/logo.jpg" alt="logo">
+        </div>
+        <div class="footer__redes">
+          <h3>Redes</h3>
+          <ul class="footer__redes-ul">
+            <li>
+              <a class="footer__redes__link" href="#">
+                <i class="bi bi-facebook">/gofixtucuman</i>
+              </a>
+            </li>
+            <li>
+              <a class="footer__redes__link" href="#">
+                <i class="bi bi-instagram">/gofixtucuman</i>
+              </a>
+            </li>
+            <li>
+              <a class="footer__redes__link" href="#">
+                <i class="bi bi-linkedin">/gofixtucuman</i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
     </main>
     <script src="./js/index.js"></script>
     <script src="./js/productos.js"></script>

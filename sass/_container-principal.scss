@@ -5,7 +5,7 @@
   justify-content: center;
   @media (min-width: 1115px){
     display: grid;
-    grid-template-columns: 3fr 6fr 3fr;
+    grid-template-columns: 1fr 4fr 1fr;
   }
   &__aside{
     display: none;
@@ -20,13 +20,26 @@
     }
   }
   &__products{
+
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     @media (min-width: 1115px){
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: start;
+      justify-content: center;
+    }
+  }
+  &__destacados{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: 1115px){
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
   &__card{
@@ -86,4 +99,9 @@
     }
 
   }
+}
+.titulo-destacados{
+  text-align: center;
+  color: variables.$black;
+  font-weight: 700;
 }

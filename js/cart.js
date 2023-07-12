@@ -109,13 +109,16 @@ const agregarAlCarrito = (id, cantidad) => {
 // Funcion para mostrar el modal
 const mostrarModalCartCart = () => {
   // Cheuqeamos el estado del carrito
+  if(sessionStorage.getItem("carrito")=== null){
+    container.innerHTML = `<p class="cart-modal__tittle">Carrito vacio</p>`;
+    cartModal.style.display = "block";
+    return
+  }
   let largo = JSON.parse(sessionStorage.getItem("carrito"))
-  console.log(largo.length)
   if ( largo.length<1) {
     // Si esta vacio le mandamos un mensaje
     container.innerHTML = `<p class="cart-modal__tittle">Carrito vacio</p>`;
     cartModal.style.display = "block";
-    console.log("ESTAS ELIMINANDO BRODEEER")
   } else {
     // Si tiene datos los obtenemos
     carrito = JSON.parse(sessionStorage.getItem("carrito"));
@@ -169,6 +172,12 @@ const eliminarDelCarrito = (id) =>{
   numerito.style.display = 'block'
   mostrarModalCartCart()
 }
+
+// Redirigir a la pagina del carrito
+const cartModalButton = document.querySelector('.cart-modal__button')
+cartModalButton.addEventListener('click', () =>{
+  window.location.href = "carrito.html"
+})
 
 
 

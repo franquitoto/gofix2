@@ -1,7 +1,8 @@
 const contenedorProductos = document.querySelector(".container-principal__products");
+const contenedorDestacados = document.querySelector(".container-principal__destacados")
 let productos;
 
-const mostrarProducto = (producto) =>{
+const mostrarProducto = (producto, contenedor) =>{
   // Creamos las etiquetas del producto
   const tarjetaProducto = document.createElement("div");
   const headerProducto = document.createElement("div");
@@ -56,7 +57,12 @@ const mostrarProducto = (producto) =>{
   tarjetaProducto.appendChild(img);
   tarjetaProducto.appendChild(footerProducto);
 
-  contenedorProductos.append(tarjetaProducto)
+  if(contenedor === 'destacados'){
+    contenedorDestacados.append(tarjetaProducto)
+  }else{
+    contenedorProductos.append(tarjetaProducto)
+  }
+  
   
 
 }
@@ -75,7 +81,7 @@ function actualizarBotonesAgregar() {
     boton.addEventListener("click", actualizarImg);
   });
 }
-
+// Mostramos los productos apenas carga la pagina
 fetch("http://localhost:3000/api/productos")
   .then((response) => response.json())
   .then((data) => {
@@ -86,11 +92,67 @@ fetch("http://localhost:3000/api/productos")
     contenedorProductos.removeChild(contenedorProductos.firstChild)
   }
     productos.forEach(e => {
+      mostrarProducto(e, 'destacadoss')
+    });
+    
+  });
+// Mostramos los productos destacados
+fetch("http://localhost:3000/api/productos")
+  .then((response) => response.json())
+  .then((data) => {
+    productos = data.productos;
+    // Con esto eliminamos todos los html que tenga el contenedor de 
+  //productos para que no se dupliquen cada vez que usamos un filtro
+  while (contenedorDestacados.firstChild) {
+    contenedorDestacados.removeChild(contenedorDestacados.firstChild)
+  }
+  const filtro = productos.filter(e => e.destacado === 'SI');
+    filtro.forEach(e => {
+      mostrarProducto(e, 'destacados')
+    });
+    
+  });
+
+// Funcion que nos deriva a la vista detalle
+const vistaDetalle = (id) =>{
+  sessionStorage.setItem("producto", id)
+  window.location.href = "detalle.html"
+}
+
+// Creamos algunos filtros
+const filtroMarca = (valor) =>{
+  fetch("http://localhost:3000/api/productos")
+  .then((response) => response.json())
+  .then((data) => {
+    productos = data.productos;
+    // Con esto eliminamos todos los html que tenga el contenedor de 
+  //productos para que no se dupliquen cada vez que usamos un filtro
+  while (contenedorProductos.firstChild) {
+    contenedorProductos.removeChild(contenedorProductos.firstChild)
+  }
+    const filtro = productos.filter(e => e.marca === valor);
+    console.log(filtro)
+    filtro.forEach(e => {
       mostrarProducto(e)
     });
     
   });
-const vistaDetalle = (id) =>{
-  sessionStorage.setItem("producto", id)
-  window.location.href = "detalle.html"
+}
+const filtroCategoria = (valor) =>{
+  fetch("http://localhost:3000/api/productos")
+  .then((response) => response.json())
+  .then((data) => {
+    productos = data.productos;
+    // Con esto eliminamos todos los html que tenga el contenedor de 
+  //productos para que no se dupliquen cada vez que usamos un filtro
+  while (contenedorProductos.firstChild) {
+    contenedorProductos.removeChild(contenedorProductos.firstChild)
+  }
+    const filtro = productos.filter(e => e.categoria === valor);
+    console.log(filtro)
+    filtro.forEach(e => {
+      mostrarProducto(e)
+    });
+    
+  });
 }
